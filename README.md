@@ -16,15 +16,15 @@ This repository use PYTHON and contains a minimal front-end demo (HTML/CSS/JS) w
 - **Dark-first** theme with a light mode toggle (moon/sun icons).
 - **Multilingual** UI: English (EN-US), Portuguese (PT-BR), Spanish (ES-ES) and Spanish Latin (ES-LA).
 - **Backend**: to run the Python parts of the project locally:
-        - Ensure you have Python 3.8+ and a virtual environment set up.
-        - Install dependencies (example for YOLOv5):
-        `pip install -r requirements.txt`
-        - Prepare your dataset in YOLO format and update `data/custom.yaml` with `nc` and `names`.
-        - Run training (transfer learning) with a pretrained weight (example):
-        `python train.py --img 640 --batch 16 --epochs 50 --data data/custom.yaml --weights yolov5s.pt --name custom_run`
-        - After training, run inference with your trained weights and save the annotated image:
-        `python detect_and_draw.py --weights runs/train/custom_run/weights/best.pt --source input.jpg --output output_detected.jpg`
-        - Open the saved `output_detected.jpg` in any image viewer or load it into the demo preview.
+    - Ensure you have Python 3.8+ and a virtual environment set up.
+    - Install dependencies (example for YOLOv5):
+    `pip install -r requirements.txt`
+    - Prepare your dataset in YOLO format and update `data/custom.yaml` with `nc` and `names`.
+    - Run training (transfer learning) with a pretrained weight (example):
+    `python train.py --img 640 --batch 16 --epochs 50 --data data/custom.yaml --weights yolov5s.pt --name custom_run`
+    - After training, run inference with your trained weights and save the annotated image:
+    `python detect_and_draw.py --weights runs/train/custom_run/weights/best.pt --source input.jpg --output output_detected.jpg`
+    - Open the saved `output_detected.jpg` in any image viewer or load it into the demo preview.
 - **Accessibility** features: skip link, ARIA labels, keyboard shortcuts and focus styles.
 - **Responsiveness** for desktop, tablet and mobile.
 - A simple **client-side preview** that simulates bounding boxes for demonstration (does not run model inference).
@@ -45,8 +45,8 @@ This repository use PYTHON and contains a minimal front-end demo (HTML/CSS/JS) w
     ```
 
 - **HTML**: Semantic HTML with header, main, nav and footer.
-- **CSS**`: CSS variables, dark-first theme, responsive layout and accessible focus styles.
-- **JavaScript**`: Theme toggle, language selection, preview simulation and persistence (localStorage).
+- **CSS**: CSS variables, dark-first theme, responsive layout and accessible focus styles.
+- **JavaScript**: Theme toggle, language selection, preview simulation and persistence (localStorage).
 
 ## Usage
 

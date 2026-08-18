@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YOLO Dataset & Training</title>
+  <meta name="description" content="Simple responsive demo UI for YOLO dataset and training workflow. Dark/light mode, multilingual and accessible." />
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body class="theme-dark" data-theme="dark">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1 class="site-title" id="site-title">YOLO Dataset & Training</h1>
+
+      <div class="controls" role="region" aria-label="Theme and language controls">
+        <button id="theme-toggle" class="icon-btn" aria-pressed="true" aria-label="Toggle dark mode">
+          <!-- Moon (dark) / Sun (light) icons will be swapped by JS -->
+          <svg id="icon-moon" class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+          </svg>
+          <svg id="icon-sun" class="icon hidden" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zM1 13h3v-2H1v2zm10 9h2v-3h-2v3zM4.22 19.78l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM20 13h3v-2h-3v2zM17.24 4.84l1.79-1.79 1.79 1.79-1.79 1.79-1.79-1.79zM12 6a6 6 0 100 12 6 6 0 000-12z"></path>
+          </svg>
+        </button>
+
+        <label for="lang-select" class="visually-hidden">Select language</label>
+        <select id="lang-select" aria-label="Select language">
+          <option value="en-US">English (EN-US)</option>
+          <option value="pt-BR">Português (PT-BR)</option>
+          <option value="es-ES">Español (ES-ES)</option>
+          <option value="es-419">Español Latino (ES-LA)</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="#" id="crumb-home">Home</a></li>
+        <li aria-current="page" id="crumb-demo">Demo</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main" class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">YOLO Dataset & Training</h2>
+      <p id="hero-desc">
+        A small, responsive interface to demonstrate dataset workflow, detection preview and training notes.
+      </p>
+    </section>
+
+    <section class="grid" aria-labelledby="workflow-title">
+      <h3 id="workflow-title">Workflow</h3>
+
+      <article class="card" aria-labelledby="card-label-1">
+        <h4 id="card-label-1">1. Prepare dataset</h4>
+        <p>Organize images and labels in YOLO format: <code>images/train</code>, <code>labels/train</code>, etc.</p>
+      </article>
+
+      <article class="card" aria-labelledby="card-label-2">
+        <h4 id="card-label-2">2. Train (transfer learning)</h4>
+        <p>Use pretrained weights and update <code>data/custom.yaml</code> with your classes.</p>
+      </article>
+
+      <article class="card" aria-labelledby="card-label-3">
+        <h4 id="card-label-3">3. Detect & visualize</h4>
+        <p>Run inference and save annotated images. This demo shows a simple preview flow.</p>
+      </article>
+    </section>
+
+    <section class="demo" aria-labelledby="demo-title">
+      <h3 id="demo-title">Detection Preview</h3>
+
+      <form id="demo-form" class="demo-form" aria-label="Detection preview form">
+        <label for="image-input" id="image-label">Choose an image</label>
+        <input id="image-input" type="file" accept="image/*" aria-labelledby="image-label" />
+
+        <fieldset class="options" aria-label="Options">
+          <legend>Options</legend>
+
+          <label for="conf-range">Confidence threshold: <span id="conf-value">0.25</span></label>
+          <input id="conf-range" type="range" min="0.05" max="0.95" step="0.01" value="0.25" />
+
+          <label for="show-boxes">
+            <input id="show-boxes" type="checkbox" checked />
+            Show bounding boxes
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button id="preview-btn" type="button">Preview (client-side)</button>
+          <button id="reset-btn" type="button" class="secondary">Reset</button>
+        </div>
+      </form>
+
+      <figure class="preview" aria-live="polite">
+        <img id="preview-img" alt="Preview area" src="" />
+        <figcaption id="preview-caption">No image selected</figcaption>
+      </figure>
+
+      <aside class="notes" aria-labelledby="notes-title">
+        <h4 id="notes-title">Notes</h4>
+        <ul>
+          <li>This demo does not run model inference locally; it simulates annotation boxes for preview purposes.</li>
+          <li>Use the Python script for real detection and save results to the <code>output_detected.jpg</code>.</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p id="footer-text">Developed by Nivaldo Beirão</p>
+    </div>
+  </footer>
+
+  <script src="./src/script.js" defer></script>
+</body>
+</html>

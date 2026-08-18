@@ -6,7 +6,7 @@ In this project, we will label a dataset and train the YOLO network.
 The work must include at least two retrained detection classes, in addition to the classes the model was already trained on prior to transfer learning.
 
 An example of the expected result can be seen in the image:
-![Figure 1](./docs/assets/output_detected.png)
+![Figure 1](docs/assets/output_detected_II.png)
 Figure 1: Detection in images using the YOLO network.
 
 A small, semantic, accessible and responsive static UI to accompany a YOLO dataset and training workflow.

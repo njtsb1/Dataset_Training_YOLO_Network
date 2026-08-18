@@ -45,8 +45,8 @@ This repository use PYTHON and contains a minimal front-end demo (HTML/CSS/JS) w
     ```
 
 - **HTML**: Semantic HTML with header, main, nav and footer.
-- **CSS**`: CSS variables, dark-first theme, responsive layout and accessible focus styles.
-- **JavaScript**`: Theme toggle, language selection, preview simulation and persistence (localStorage).
+- **CSS**: CSS variables, dark-first theme, responsive layout and accessible focus styles.
+- **JavaScript**: Theme toggle, language selection, preview simulation and persistence (localStorage).
 
 ## Usage
 

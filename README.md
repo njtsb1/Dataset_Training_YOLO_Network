@@ -6,7 +6,9 @@ In this project, we will label a dataset and train the YOLO network.
 The work must include at least two retrained detection classes, in addition to the classes the model was already trained on prior to transfer learning.
 
 An example of the expected result can be seen in the image:
-![Figure 1](docs/assets/output_detected_II.png)
+
+<img width="1000" height="750" alt="output_detected_II" src="https://github.com/user-attachments/assets/5c2aed62-9a3b-4eb5-a738-4b7ea7526482" />
+
 Figure 1: Detection in images using the YOLO network.
 
 A small, semantic, accessible and responsive static UI to accompany a YOLO dataset and training workflow.
@@ -70,6 +72,6 @@ This repository use PYTHON and contains a minimal front-end demo (HTML/CSS/JS) w
 - The preview boxes are simulated client-side and are not the result of model inference.
 - To integrate real detections, adapt the Python inference script to save annotated images and load them into the preview area.
 
-![YOLO_dataset_training](docs/assets/YOLO_dataset_training.png)
+<img width="1033" height="1274" alt="YOLO_dataset_training" src="https://github.com/user-attachments/assets/397f3a9d-b465-44e2-a089-47ebd69b0329" />
 
 [LICENSE](/LICENSE)
